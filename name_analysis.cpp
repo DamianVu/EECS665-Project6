@@ -7,6 +7,8 @@ namespace LILC{
 bool ProgramNode::nameAnalysis(SymbolTable * symTab){
 	symTab->enterScope();
 	bool valid = this->myDeclList->nameAnalysis(symTab);
+	SymbolTableEntry * temp = symTab->lookup("main");
+	valid = (temp != nullptr) && valid;
 	symTab->exitScope();
 	return valid;
 }

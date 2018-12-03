@@ -16,3 +16,4 @@ grammar.hh
 lilc_lexer.yy.cc
 lilc_parser.cc
 *.d
+*.s
