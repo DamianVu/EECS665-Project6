@@ -26,7 +26,7 @@ main( const int argc, const char **argv )
 		std::cerr << err.what() << std::endl;
 	} catch (LILC::InternalError& err){
 		std::cerr << err.what() << std::endl;
-	} catch (std::runtime_error err){
+	} catch (std::runtime_error& err){
 		std::cerr << "runtime error" << std::endl;
 		std::cerr << err.what() << std::endl;
 	}
